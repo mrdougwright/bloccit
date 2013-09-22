@@ -12,6 +12,8 @@ group :development do
   gem 'sqlite3'
 end
 
+gem 'bootstrap-sass', '~> 2.3.1.0'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
@@ -38,14 +40,10 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-# Use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
-
-# Use unicorn as the app server
-# gem 'unicorn'
-
-# Use Capistrano for deployment
-# gem 'capistrano', group: :development
-
-# Use debugger
-# gem 'debugger', group: [:development, :test]
+# # gems to add via block (older versions commented out)
+# group :assets do
+# 	gem 'sass-rails', '~> 3.2.3'
+# 	gem 'coffee-rails', '~> 3.2.1'
+# 	gem 'bootstrap-sass', '~> 2.3.1.0'
+# 	gem 'uglifier', '>= 1.0.3'
+# end
