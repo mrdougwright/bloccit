@@ -47,3 +47,5 @@ end
 # 	gem 'bootstrap-sass', '~> 2.3.1.0'
 # 	gem 'uglifier', '>= 1.0.3'
 # end
+# added to avert Rails 4 thing...
+gem 'protected_attributes'
