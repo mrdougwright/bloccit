@@ -12,8 +12,6 @@ group :development do
   gem 'sqlite3'
 end
 
-gem 'bootstrap-sass', '~> 2.3.1.0'
-
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
@@ -31,6 +29,8 @@ gem 'jquery-rails'
 
 # bloc added gems
 gem 'faker'
+gem 'devise'
+gem 'bootstrap-sass', '~> 2.3.1.0'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
