@@ -4,10 +4,11 @@
     <div class="media-body">
       <h4 class="media-heading">
         <%= link_to post.title, post %>
-        <div class="pull-right">
-        	<%= post.created_at %>
-        </div>
       </h4>
+      <small>
+        submitted <%= time_ago_in_words(post.created_at) %> ago by <%= post.user.name %><br/>
+        <%= post.comments.count %> Comments
+      </small>
     </div>
   </div>
 <% end %>
