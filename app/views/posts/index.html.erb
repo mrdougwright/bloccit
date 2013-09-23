@@ -1,4 +1,7 @@
 <h1>All Posts</h1>
+<% if can? :create, Post %>
+  <%= link_to "Submit a New Post", new_post_path, class: 'btn btn-warning pull-right' %>
+<% end %>
 <% @posts.each do |post| %>
   <div class="media">
     <div class="media-body">
