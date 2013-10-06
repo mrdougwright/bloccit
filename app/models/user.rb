@@ -1,8 +1,11 @@
 class User < ActiveRecord::Base
-	attr_accessible :name, :email, :password, :password_confirmation, :remember_me
+	attr_accessible :name, :email, :password, :password_confirmation, 
+                  :remember_me, :avatar
+                  
   has_many :posts
 
   before_create :set_member
+  mount_uploader :avatar, AvatarUploader
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable,

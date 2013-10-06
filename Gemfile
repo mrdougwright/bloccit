@@ -13,6 +13,10 @@ group :development do
 end
 
 gem 'redcarpet'
+gem 'mini_magick'
+gem 'carrierwave'
+gem 'fog'
+gem 'figaro'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -54,5 +58,7 @@ end
 # 	gem 'uglifier', '>= 1.0.3'
 # end
 
-# added to avert Rails 4 thing...
+# added to avert Rails 4 headaches...
 gem 'protected_attributes'
+gem 'sprockets-rails' # https://github.com/carrierwaveuploader/carrierwave/issues/1019
+

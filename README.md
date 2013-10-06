@@ -6,4 +6,4 @@ Made with help from [Bloc](http://bloc.io)
 Hosted by Heroku [here](http://sheltered-forest-8124.herokuapp.com/)
 
 Notes:
-  The SendGrid setup_mail.rb.tmp should be updated with your user_name and password and added to your .gitignore file. You can find this in config/initializers/setup_mail.rb
+  Copy the "config/application.example.yml" file and remove "example". Your application.yml should contain your sensitive credentials. It should be included in .gitnore as well.

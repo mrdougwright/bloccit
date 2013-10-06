@@ -14,5 +14,7 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
-config/initializers/setup_mail.rb
 .DS_Store
+
+# Ignore application configuration
+/config/application.yml
