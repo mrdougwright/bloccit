@@ -78,5 +78,8 @@ Bloccit::Application.configure do
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
 
-  
+  # devise added:
+  config.action_mailer.default_url_options = { :host => 'http://sheltered-forest-8124.herokuapp.com' }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.perform_deliveries = true
 end
