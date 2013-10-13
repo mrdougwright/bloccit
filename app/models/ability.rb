@@ -23,5 +23,6 @@ class Ability
     end
 
     can :read, :all
+    can :comment, :all
   end
 end

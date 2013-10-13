@@ -1,21 +1,18 @@
 class CommentsController < ApplicationController
-  def new
-    @comment = Comment.new
-  end
-
   def create
-    @comment = Comment.new(params[:comment])
-    authorize! :create, @comment, message: "You need to be an admin to do that."
+    @topic = Topic.find(params[:topic_id])
+    @post = @topic.posts.find(params[:post_id])
+    @comments = @post.comments
+
+    @comment = current_user.comments.build(params[:comment])
+    @comment.post = @post
+    
     if @comment.save
-      redirect_to @comment, notice: "Comment was saved successfully."
+      flash[:notice] = "Comment was created."
+      redirect_to [@topic, @post]
     else
-      flash[:error] = "Error creating comment. Please try again."
-      render :new
+      flash[:error] = "There was an error saving the comment. Please try again."
+      render 'posts/show'
     end
   end
-
-  def show
-    @comment = Comment.find(params[:id])
-  end
-
 end
