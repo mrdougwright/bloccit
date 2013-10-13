@@ -20,7 +20,7 @@ rand(4..10).times do
   u.skip_confirmation!
   u.save
 
-  rand(50..500).times do
+  rand(5..50).times do
     topic = topics.first
     p = u.posts.create(
       topic: topic,
