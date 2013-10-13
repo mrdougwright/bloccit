@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
 	attr_accessible :name, :email, :password, :password_confirmation, 
-                  :remember_me, :avatar
+                  :remember_me, :avatar, :comments
                   
   has_many :posts
 

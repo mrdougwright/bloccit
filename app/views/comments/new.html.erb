@@ -1,0 +1,13 @@
+<h1>New Comment</h1>
+
+<div class="row">
+  <div class="span4">
+    <p>Guidelines for new comments:</p>
+    <ul>
+      <li>Make sure comment is appropriate.</li>
+    </ul>
+  </div>
+  <div class="span8">
+    <%= render partial: 'comment_form', locals: { topic: @topic, post: @post, comment: @comment } %>
+  </div>
+</div>
