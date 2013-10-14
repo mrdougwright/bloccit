@@ -1,7 +1,8 @@
 class User < ActiveRecord::Base
 	attr_accessible :name, :email, :password, :password_confirmation, 
                   :remember_me, :avatar, :provider, :uid
-                  
+
+  has_many :votes, dependent: :destroy  
   has_many :posts
   has_many :comments
 
