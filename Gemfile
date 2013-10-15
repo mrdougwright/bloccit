@@ -12,6 +12,12 @@ group :development do
   gem 'sqlite3'
 end
 
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'guard-rspec'
+  gem 'factory_girl_rails', '~> 4.0'
+end
+
 gem 'redcarpet'
 gem 'mini_magick'
 gem 'carrierwave'
